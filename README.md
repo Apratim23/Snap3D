@@ -105,7 +105,7 @@ Contributions are welcome! Please feel free to submit a Pull Request 🎉.
 
 ## 📜 License
 
-This project is licensed under the MIT License - see the [LICENSE]() file for details 📝.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/Apratim23/Snap3D/blob/main/LICENSE) file for details 📝.
 
 ## 👨‍💻 Developer
 
