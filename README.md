@@ -110,9 +110,6 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 ## 👨‍💻 Developer
 
 Developed by [@Apratim23](https://github.com/Apratim23) 🌟
- <img src="	http://ForTheBadge.com/images/badges/made-with-python.svg" alt="Made-with-Python" />
-
-
 [LinkedIn](https://www.linkedin.com/in/apratim-dutta-78b5ba216/)
 [GitHub](https://github.com/Apratim23)
 
