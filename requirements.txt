@@ -1,0 +1,11 @@
+numpy
+opencv-python
+pyrender
+trimesh
+open3d
+rembg
+torch
+diffusers
+transformers
+Pillow
+matplotlib
