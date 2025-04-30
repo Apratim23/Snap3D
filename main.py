@@ -1,6 +1,6 @@
 import argparse
 import os
-from text_to_3d import generate_mesh_from_text
+from text_to_3d import mft
 from photo_to_3d import mtf
 from visualize import sm
 import trimesh

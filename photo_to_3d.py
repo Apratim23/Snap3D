@@ -3,7 +3,7 @@ from rembg import remove
 import trimesh
 import os
 
-def mfp(image_path):
+def mtf(image_path):
     print("Removing background...")
     with open(image_path, "rb") as f:
         image = Image.open(f).convert("RGBA")
