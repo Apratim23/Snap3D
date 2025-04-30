@@ -1,5 +1,3 @@
-# utils/background_removal.py
-
 from rembg import remove
 from PIL import Image
 
@@ -9,5 +7,5 @@ def remove_background(image_path, save_path=None):
 
     if save_path:
         output.save(save_path)
-    
+        
     return output
