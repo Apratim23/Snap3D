@@ -9,11 +9,11 @@ def generate_mesh_from_photo(image_path):
         image = Image.open(f).convert("RGBA")
     fg = remove(image)
   
-    bg_removed_path = os.path.join("outputs", "bg_removed.png")
-    fg.save(bg_removed_path)
-    print(f"Background removed image saved to: {bg_removed_path}")
+    bg_rem = os.path.join("outputs", "bg_removed.png")
+    fg.save(bg_rem)
+    print(f"Background removed image saved to: {bg_rem}")
 
-    # TODO: Replace with actual depth -> mesh logic
-    print("🔧 Creating dummy cube for now...")
+
+    print("Creating dummy cube for now...")
     mesh = trimesh.creation.box(extents=[1.0, 1.0, 1.0])
     return mesh

@@ -3,16 +3,16 @@
 import numpy as np
 from PIL import Image
 
-def image_to_point_cloud(image):
+def itc(image):
     # Takes a PIL Image (RGBA) and creates point cloud points
     img_array = np.array(image)
-    points = []
+    pts = []
 
-    height, width, _ = img_array.shape
-    for y in range(height):
-        for x in range(width):
+    h, w, _ = img_array.shape
+    for y in range(h):
+        for x in range(w):
             r, g, b, a = img_array[y, x]
             if a > 0:  # if pixel is not transparent
-                points.append([x, height - y, 0])
+                pts.append([x, h - y, 0])
 
-    return np.array(points)
+    return np.array(pts)
