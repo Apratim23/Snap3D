@@ -1,35 +1,35 @@
 import argparse
 import os
 from text_to_3d import generate_mesh_from_text
-from photo_to_3d import generate_mesh_from_photo
-from visualize import show_mesh
+from photo_to_3d import mtf
+from visualize import sm
 import trimesh
 
-OUTPUT_DIR = "outputs"
-os.makedirs(OUTPUT_DIR, exist_ok=True)
+ODIR = "outputs"
+os.makedirs(ODIR, exist_ok=True)
 
 def main():
-    parser = argparse.ArgumentParser()
-    group = parser.add_mutually_exclusive_group(required=True)
+    p = argparse.ArgumentParser()
+    group = p.add_mutually_exclusive_group(required=True)
     group.add_argument("--image", type=str, help="Added the path to Image input")
     group.add_argument("--text", type=str, help="Input in Text Format")
-    parser.add_argument("--format", choices=["obj", "stl"], default="obj", help="Output format")
-    parser.add_argument("--no-visualize", action="store_true")
-    args = parser.parse_args()
+    p.add_argument("--format", choices=["obj", "stl"], default="obj", help="Output format")
+    p.add_argument("--no-visualize", action="store_true")
+    args = p.parse_args()
 
     if args.image:
         print(f"Processing image: {args.image}")
-        mesh = generate_mesh_from_photo(args.image)
+        mesh = mtf(args.image)
     else:
         print(f"Generating from text: \"{args.text}\"")
-        mesh = generate_mesh_from_text(args.text)
+        mesh = mtf(args.text)
 
-    output_path = os.path.join(OUTPUT_DIR, f"model.{args.format}")
-    mesh.export(output_path)
-    print(f"Saved 3D model to: {output_path}")
+    op = os.path.join(ODIR, f"model.{args.format}")
+    mesh.export(op)
+    print(f"Saved 3D model to: {op}")
 
     if not args.no_visualize:
-        show_mesh(mesh)
+        sm(mesh)
 
 if __name__ == "__main__":
     main()
